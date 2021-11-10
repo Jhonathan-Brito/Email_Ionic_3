@@ -1,14 +1,30 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
+  <ion-navbar color="tertiary">
+    <ion-title style="text-align: center;">
+      Email Composer
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+  <div pdding>
+    <ion-item>
+        <ion-label color="primary" stackend> Subject </ion-label>
+        <ion-input [(ngModel)]="subject" type="text" placeholder="Digite seu texto aqui"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stackend>Body Content</ion-label>
+      <ion-input [(ngModel)]="body" type="text" placeholder="Digite seu texto aqui"></ion-input>
+  </ion-item>  
+
+  <ion-item>
+    <ion-label color="primary" stackend>To</ion-label>
+    <ion-input [(ngModel)]="to" type="text" placeholder="Digite seu emai aqui"></ion-input>
+</ion-item>
+
+    <button ion-button block (click)="enviar()">Enviar</button>   
+
+ </div>
+
 </ion-content>
